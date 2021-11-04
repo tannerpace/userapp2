@@ -1,3 +1,13 @@
+import AddIcon from "@mui/icons-material/Add"
+import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward"
+import CheckIcon from "@mui/icons-material/Check"
+import DeleteIcon from "@mui/icons-material/Delete"
+import EditIcon from "@mui/icons-material/Edit"
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
+import FavoriteIcon from "@mui/icons-material/Favorite"
+import MoreVertIcon from "@mui/icons-material/MoreVert"
+import NavigationIcon from "@mui/icons-material/Navigation"
+import ShareIcon from "@mui/icons-material/Share"
 import {
   Accordion,
   AccordionDetails,
@@ -41,17 +51,7 @@ import {
   Tabs,
   TextField,
   Typography,
-} from "@material-ui/core"
-import AddIcon from "@material-ui/icons/Add"
-import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward"
-import CheckIcon from "@material-ui/icons/Check"
-import DeleteIcon from "@material-ui/icons/Delete"
-import EditIcon from "@material-ui/icons/Edit"
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
-import FavoriteIcon from "@material-ui/icons/Favorite"
-import MoreVertIcon from "@material-ui/icons/MoreVert"
-import NavigationIcon from "@material-ui/icons/Navigation"
-import ShareIcon from "@material-ui/icons/Share"
+} from "@mui/material"
 import PropTypes from "prop-types"
 import { useState } from "react"
 

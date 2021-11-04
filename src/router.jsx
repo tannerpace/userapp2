@@ -1,7 +1,7 @@
 import Route from "components/Route"
 import NotFound from "pages/NotFound"
 import PropTypes from "prop-types"
-import { Redirect,Switch } from "react-router-dom"
+import { Redirect, Switch } from "react-router-dom"
 
 const PageComponents = {}
 const componentsReq = require.context("./pages", true, /^(.*\.(jsx$))[^.]*$/im)
@@ -15,7 +15,7 @@ export const routeConfig = [
   {
     "path": "/",
     "exact": true,
-    "component": "KitchenSink"
+    "component": "Login"
   },
   {
     "path": "/kitchen-sink",
@@ -23,8 +23,8 @@ export const routeConfig = [
     "component": "KitchenSink"
   },
   {
-    "path": "/login",
-    "component": "Login",
+    "path": "/table",
+    "component": "Table",
     "protected": false
   }
 ]
@@ -36,7 +36,7 @@ export const Router = ({ routes, match }) => {
 
   return (
     <Switch>
-      <Redirect from="/:url*(/+)" to={window.location.pathname.slice(0, -1)+window.location.search} />
+      <Redirect from="/:url*(/+)" to={window.location.pathname.slice(0, -1) + window.location.search} />
       {routes.map(({ component, ...rest }, i) => (
         <Route key={i} {...rest} component={PageComponents[component]} />
       ))}

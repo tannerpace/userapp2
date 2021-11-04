@@ -1,18 +1,17 @@
-import App from "contexts/App"
-import { useContext } from "react"
-import { Redirect, Route } from "react-router-dom"
+import useIsLoggedIn from "hooks/useIsLoggedIn"
 import PropTypes from "prop-types"
+import { Redirect, Route } from "react-router-dom"
 
 // protected route component
 const ProtectedRoute = (props) => {
   // destructures passed in component
   const { component: C, ...routeProps } = props
-  const { token } = useContext(App)
+  const loggedIn = useIsLoggedIn()
   return (
     <Route
       {...routeProps}
       render={(p) =>
-        token ? (
+        loggedIn ? (
           // if there is a token that is stored we render the component
           <C {...p} {...routeProps} match={routeProps.computedMatch} />
         ) : (

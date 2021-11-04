@@ -1,4 +1,4 @@
-import Typography from "@material-ui/core/Typography"
+import { Typography } from "@mui/material"
 import animationData from "assets/404-lottie.json"
 import Lottie from "react-lottie"
 

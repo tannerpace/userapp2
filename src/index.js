@@ -1,13 +1,13 @@
 import "./styles/base.css"
 
-import CssBaseline from "@material-ui/core/CssBaseline"
-import { MuiThemeProvider } from "@material-ui/core/styles"
-import App from "components/App"
+import { ThemeProvider } from "@mui/material"
+import CssBaseline from "@mui/material/CssBaseline"
 import ReactDOM from "react-dom"
 import { initDB } from "react-indexed-db"
 import { QueryClient, QueryClientProvider } from "react-query"
 import { BrowserRouter } from "react-router-dom"
 
+import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import theme from "./themes/main"
 
@@ -30,12 +30,12 @@ initDB({
 
 const Application = (
   <BrowserRouter>
-    <MuiThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       <QueryClientProvider client={queryClient}>
         <App />
       </QueryClientProvider>
-    </MuiThemeProvider>
+    </ThemeProvider>
   </BrowserRouter>
 )
 
